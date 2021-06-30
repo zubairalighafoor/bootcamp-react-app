@@ -31,9 +31,9 @@ jobs:
       uses: Borales/actions-yarn@v2.3.0
       with:
         cmd: install
-    - name: Build
+    - name: Creating Build
       run: yarn build
     - name: Installing Surge
-      run: npm install -g surge
+      run: npm install --global surge
     - name: Deploying on surge
       run: surge ./build http://reactexamplebyzubair.surge.sh/ --token ${{ secrets.SURGE}}
